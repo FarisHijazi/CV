@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+%% increasing the value of "right" will push content to the left
+\geometry{left=1.5cm,right=11cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  %% If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  %% If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\usepackage{hyperref}
+\hypersetup{
+%   colorlinks   = true,  %%Colours links instead of ugly boxes
+  urlcolor      = blue,  %%Colour for external hyperlinks
+  linkcolor     = blue,  %%Colour of internal links
+  citecolor     = red,   %%Colour of citations
+  frenchlinks   = true
+}
+
+
+%% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%% Change the bullets for itemize and rating marker
+%% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Faris Hijazi}
+\tagline{Computer Engineer}
+
+%% Profile picture (optional)
+% \photo{3.3cm}{profile0.jpg}
+
+\personalinfo{%
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\href{mailto:faris@sunwan.com}{faris@sunwan.com}}
+  \phone{+966-505501494}
+%  \mailaddress{Address, Street, 00000 County}
+  \location{Riyadh, Saudi Arabia}
+%  \homepage{}
+  \github{\href{https://github.com/FarisHijazi}{github.com/FarisHijazi}}
+  \linkedin{\href{https://linkedin.com/in/Faris-Hijazi}{/in/Faris-Hijazi}}
+%   \twitter{@buzzition}
+%   \orcid{orcid.org/0000-0001-6202-8787}
+%% If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Makes the header extend all the way to the right.
+\begin{fullwidth}
+\makecvheader
+
+Detail-oriented Computer Engineer with a background in data science and machine learning.\\
+Looking for a job opportunity to tackle real world problems by applying my skills collaborating with teams and developing advanced technical solutions.
+I love challenging tasks and learning new technologies and techniques.
+I enjoy streamlining processes and automating tedious tasks, like data collection by web-scraping or auto-generating reports/documentation using Python.
+
+\end{fullwidth}
+
+%% Makes fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{}
+\input{sections/experience.tex}
+
+%\divider
+
+\clearpage
+\cvsection[page2sidebar.tex]{}
+\input{sections/projects.tex}
+
+
+% \clearpage
+
+%% new page here
+% \input{sections/education.tex}
+%% divider
+
+% \input{sections/adayofmylife.tex}
+
+% \clearpage %% this makes a new page like a page break
+% \input{sections/references.tex}
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+\mbox{}
+\vfill
+
+*References and copies of certificates will be provided upon request.
+
+\end{document}
