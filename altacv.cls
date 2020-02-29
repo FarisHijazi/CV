@@ -119,6 +119,8 @@
 \setlength{\parindent}{0pt}
 \newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
 
+\newcommand{\smalldivider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}}
+
 \newenvironment{fullwidth}{%
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
   {\end{adjustwidth}}
@@ -179,7 +181,7 @@
       {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
       {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
   }{ % if param#1 is passed (sidebar)
-    \setlength\marginparwidth{250pt}
+    \setlength\marginparwidth{260pt}
     \marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}
   }%
 }
@@ -228,7 +230,7 @@
 }
 
 \newcommand{\cvskill}[2]{%
-\textcolor{emphasis}{\textbf{#1}}\hfill
+\textcolor{emphasis}{#1}\hfill
   \ifstrequal{#2}{}{}{
     \foreach \x in {1,...,5}{%
       \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
@@ -239,7 +241,7 @@
 \newcommand{\cvref}[3]{
   \smallskip
   \textcolor{emphasis}{\textbf{#1}}\par
-  \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em]
+  \begin{description}[font=\color{accent},style=multiline,leftmargin=1.0em]
   \ifstrequal{#2}{}{}{ % if #2
     \item[\normalfont\emailsymbol] \href{mailto:#2}{#2}
   }
