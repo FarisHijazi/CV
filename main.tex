@@ -8,20 +8,27 @@
 %% icons, make sure you have the academicons
 %% option here, and compile with XeLaTeX
 %% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
-% Change the page layout if you need to
-%% increasing the value of "right" will push content to the left
-\geometry{left=1.5cm,right=11cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+%% Change the page layout if you need to
+
+%% === variables ===
+
+\geometry{
+left=1.5cm,
+right=12cm, %% 11 the right limit of the left part of the page (doesn't include the sidebars)
+marginparwidth=9cm, %% 6.8 changes the overview width
+marginparsep=1.2cm, %% 1.2
+top=1.25cm, %% 
+bottom=1.25cm %% 
+}
+% \geometry{left=1.5cm,right=11cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -37,7 +44,7 @@
 
 \usepackage{hyperref}
 \hypersetup{
-%   colorlinks   = true,  %%Colours links instead of ugly boxes
+% colorlinks   = true,  %%Colours links instead of ugly boxes
   urlcolor      = blue,  %%Colour for external hyperlinks
   linkcolor     = blue,  %%Colour of internal links
   citecolor     = red,   %%Colour of citations
@@ -63,7 +70,6 @@
 \addbibresource{sample.bib}
 
 \begin{document}
-
 \name{Faris Hijazi}
 \tagline{Computer Engineer}
 
@@ -103,6 +109,7 @@
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 
+\smallskip
 \cvsection[page1sidebar]{}
 \input{sections/experience.tex}
 
@@ -112,6 +119,7 @@
 \cvsection[page2sidebar.tex]{}
 \input{sections/projects.tex}
 
+\input{sections/referees.tex}
 
 % \clearpage
 
