@@ -212,9 +212,17 @@
   %\smallskip
 }
 
-\newcommand{\cvproject}[1]{%
+%% @params: {projectTitle, description, githubPath}
+\newcommand{\cvproject}[3]{%
   {\textbf{\color{accent}#1}\par}
   \smallskip\normalsize
+  \ifstrequal{#2}{}{}{% #2
+      \color{accent}#2\par
+    %   \smallskip
+  }
+  \ifstrequal{#3}{}{}{
+    \githubproject{github.com/#3}
+  }
 }
 
 %% put the github project partial path here (example: github.com/FarisHijazi/project0)
