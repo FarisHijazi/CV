@@ -117,7 +117,7 @@
 % \RequirePackage{marginfix}
 
 \setlength{\parindent}{0pt}
-\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\smallskip}
 
 \newcommand{\smalldivider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}}
 
@@ -186,6 +186,11 @@
   }%
 }
 
+%% this is just to disable some stuff, just delete
+\newcommand{\verbose}[1]{%
+% \ifstrequal{#1}{}{}{#1} %% comment this line to delete the verbose stuff
+}
+
 \newcommand{\cvsubsection}[1]{%
   \smallskip%
   {\color{emphasis}\large\bfseries{#1}\par}\medskip
@@ -195,17 +200,7 @@
 %% @params: {#1:Title, #2:Place, #3:Date, #4:Place}
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
-  \ifstrequal{#2}{}{}{
-      \textbf{\color{accent}#2}\par
-      \smallskip
-  }
-  \ifstrequal{#3}{}{}{
-    {\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}
-  }%
-  \ifstrequal{#4}{}{}{
-    {\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}
-  }\par
+  \smallskip\normalsize\ifstrequal{#2}{}{}{\textbf{\color{accent}#2}\par\smallskip} \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}\ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
   \medskip\normalsize
 }
 
