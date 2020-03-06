@@ -15,9 +15,15 @@
 % - https://github.com/akreuzer Added ragged2e option (5 Nov 2018)
 % - https://github.com/stefanogermano Fixed bad boxes and undefined font shape (July 2018)
 % - https://github.com/foohyfooh Fixed blank spaces in \cvevent and bad link in README.md (June 2018)
-
 %%%%%%%%%%%%%%%%
-\newcommand{\VERBOSELEVEL}[]{0} %% set this to 1 to be more verbose
+
+%% this is just to disable some stuff, just delete
+%% @params: {#1:concise_content, #2 verbose_content (details)}
+\newcommand{\verbose}[2]{%
+  \expandafter\ifstrequal{%
+    % 1 %% comment this line to make concise (no verbose)
+  }{}{#1}{#2}
+}
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %% v1.4: Detect TL2018 to handle accented characters in class information
@@ -189,15 +195,7 @@
 }
 
 
-%% this is just to disable some stuff, just delete
-%% @params: {#1:concise_content, #2 verbose_content (details)}
-\newcommand{\verbose}[2]{%
-  \expandafter\ifstrequal{\VERBOSELEVEL{}}{0}{%
-    #1 % concise
-  }{%
-    #2 % verbose
-  }
-}
+
 
 \newcommand{\cvsubsection}[1]{%
   \smallskip%
