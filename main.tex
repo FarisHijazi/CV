@@ -25,8 +25,8 @@ left=1.5cm, %% 1.5cm left margin
 right=11cm, %% 11cm the right limit of the left part of the page (doesn't include the sidebars)
 marginparwidth=6.8cm, %% 6.8cm changes the overview width
 marginparsep=1.2cm, %% 1.2cm
-top=1.25cm, %% 
-bottom=1.25cm %% 
+top=1.25cm, %% 1.25cm top margin
+bottom=1.25cm %% 1.25cm bottom margin
 }
 % \geometry{left=1.5cm,right=11cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
@@ -101,9 +101,6 @@ bottom=1.25cm %%
   \smallskip
   I'm a natural problem solver, always aiming to optimize solutions and automating/digitizing tasks (data collection by web-scraping, auto-generating reports/documentation using Python).
 
-  % Detail-oriented Computer Engineer with a background in data science and machine learning.Looking for a job opportunity to tackle real world problems by applying my skills collaboraࢢng with teams and developing advanced technical solutions.\\
-  % I love challenging tasks and learning new technologies and techniques. I enjoy streamlining processes and automaࢢng tedious tasks, like data collection by web-scraping or auto-generating reports/documentation using Python.
-
 \end{fullwidth}
 
 %% Makes fonts of itemize environments slightly smaller
@@ -114,27 +111,25 @@ bottom=1.25cm %%
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 
-\smallskip
-\cvsection[page1sidebar]{}
-\input{sections/experience.tex}
-
 %\divider
-
-\clearpage
-\cvsection[page2sidebar.tex]{}
+\cvsection[page1sidebar]{}
+\kern-2em %% this is negative space, it moves the bellow section up a bit
+\input{sections/education.tex}
+\input{sections/skills.tex}
+\input{sections/strengths.tex}
 \input{sections/projects.tex}
 
-\input{sections/referees.tex}
 
 % \clearpage
+% \cvsection[page2sidebar.tex]{}
+
+% \clearpage %% this makes a new page lik
 
 %% new page here
 % \input{sections/education.tex}
 %% divider
 
-% \input{sections/adayofmylife.tex}
-
-% \clearpage %% this makes a new page like a page break
+% \input{sections/adayofmylife.tex}e a page break
 % \input{sections/references.tex}
 
 %% If the NEXT page doesn't start with a \cvsection but you'd
