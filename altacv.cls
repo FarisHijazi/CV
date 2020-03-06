@@ -17,6 +17,8 @@
 % - https://github.com/foohyfooh Fixed blank spaces in \cvevent and bad link in README.md (June 2018)
 
 %%%%%%%%%%%%%%%%
+\newcommand{\VERBOSELEVEL}[]{0} %% set this to 1 to be more verbose
+
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %% v1.4: Detect TL2018 to handle accented characters in class information
 \@ifl@t@r\fmtversion{2018/04/01}{\UseRawInputEncoding}{}
@@ -186,9 +188,15 @@
   }%
 }
 
+
 %% this is just to disable some stuff, just delete
-\newcommand{\verbose}[1]{%
-% \ifstrequal{#1}{}{}{#1} %% comment this line to delete the verbose stuff
+%% @params: {#1:concise_content, #2 verbose_content (details)}
+\newcommand{\verbose}[2]{%
+  \expandafter\ifstrequal{\VERBOSELEVEL{}}{0}{%
+    #1 % concise
+  }{%
+    #2 % verbose
+  }
 }
 
 \newcommand{\cvsubsection}[1]{%
