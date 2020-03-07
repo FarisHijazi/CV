@@ -24,7 +24,7 @@
   left=1.5cm, %% 1.5cm left margin
   right=11cm, %% 11cm the right limit of the left part of the page (doesn't include the sidebars)
   marginparwidth=6.8cm, %% 6.8cm changes the overview width
-  marginparsep=1.2cm, %% 1.2cm
+  marginparsep=1.2cm, %% 1.2cm the middle separator, moves the right part further away
   top=1.25cm, %% 1.25cm top margin
   bottom=1.25cm %% 1.25cm bottom margin
 }
@@ -116,14 +116,11 @@
 \kern-2em %% this is negative space, it moves the bellow section up a bit
 \input{sections/education.tex}
 \input{sections/skills.tex}
-\input{sections/strengths.tex}
+% \input{sections/strengths.tex}
 \input{sections/projects.tex}
 
-
-% \clearpage
-% \cvsection[page2sidebar.tex]{}
-
 % \clearpage %% this makes a new page lik
+\cvsection[page2sidebar.tex]{}
 
 %% new page here
 % \input{sections/education.tex}
