@@ -14,6 +14,22 @@ Though if you're creating your own CV/résumé, you'd probably prefer using the 
 <img src="sample.png" alt="sample barebones AltaCV template" width="600px">
 -->
 
+## Compilation
+
+compile with:
+
+```sh
+pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="."  "main.tex"
+```
+
+in the miktex portable command line, use the following:
+
+```sh
+cd "C:\Users\Faris\Dropbox\Career\CV\CV - Faris Hijazi\"
+
+del "./main.pdf" && perl.exe c:\texlive\2019\texmf-dist\scripts\latexmk\latexmk.pl -synctex=1 -interaction=nonstopmode -file-line-error -pdf "-outdir=." "./main" -f || "./main.pdf"
+```
+
 ## Requirements and Compilation
 
 - pdflatex + biber + pdflatex
