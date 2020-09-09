@@ -185,3 +185,6 @@ TSWLatexianTemp*
 # unneeded files
 beamercolorthemeC*.sty
 *.xcf
+CV Faris Hijazi.pdf
+main.pdf
+*.err

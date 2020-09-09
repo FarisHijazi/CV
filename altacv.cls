@@ -227,7 +227,7 @@
     %   \smallskip
   }
   \ifstrequal{#3}{}{}{
-    \githubproject{github.com/#3}
+    \small{\githubproject{github.com/#3}}
   }
 }
 
