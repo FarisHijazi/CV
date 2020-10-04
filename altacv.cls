@@ -17,11 +17,10 @@
 % - https://github.com/foohyfooh Fixed blank spaces in \cvevent and bad link in README.md (June 2018)
 %%%%%%%%%%%%%%%%
 
-%% this is just to disable some stuff, just delete
 %% @params: {#1:concise_content, #2 verbose_content (details)}
 \newcommand{\verbose}[2]{%
   \expandafter\ifstrequal{%
-    % 1 %% comment this line to make concise (no verbose)
+    % 1 %% UNCOMMENT this line to make verbose
   }{}{#1}{#2}
 }
 

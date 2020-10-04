@@ -14,6 +14,23 @@ Though if you're creating your own CV/résumé, you'd probably prefer using the 
 <img src="sample.png" alt="sample barebones AltaCV template" width="600px">
 -->
 
+## Quick basic LaTex setup
+
+This is not the bets setup, you can find some on the web.
+
+```shell script
+sudo apt install pdflatex
+sudo apt install texlive
+sudo apt install texlive-fonts-recommended
+sudo apt install texlive-fonts-extra
+
+# miktex install from: https://miktex.org/download/
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
+echo "deb http://miktex.org/download/ubuntu focal universe" | sudo tee /etc/apt/sources.list.d/miktex.list
+sudo apt update
+sudo apt install miktex
+```
+
 ## Compilation
 
 compile with:

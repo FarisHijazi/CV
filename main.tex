@@ -8,7 +8,7 @@
 %% icons, make sure you have the academicons
 %% option here, and compile with XeLaTeX
 %% or LuaLaTeX.
-
+\usepackage{pdfpages}
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 
@@ -81,12 +81,12 @@
   \email{\href{mailto:faris@sunwan.com}{faris@sunwan.com}}
   \phone{+966-505501494}
   % \mailaddress{Address, Street, 00000 County}
-  \location{Riyadh, Saudi Arabia}
   % \homepage{farishijaiz.github.io}
   \github{\href{https://github.com/FarisHijazi}{github.com/FarisHijazi}}
   \linkedin{\href{https://linkedin.com/in/Faris-Hijazi}{linkedin.com/in/Faris-Hijazi}}
   \twitter{@FarisRHijazi}
-  % \orcid{orcid.org/0000-0001-6202-8787}
+  \location{Riyadh, Saudi Arabia}
+  % \orcid{\href{https://orcid.org/0000-0001-6202-8787}{orcid.org/0000-0001-6202-8787}}
   %% If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
 
@@ -116,17 +116,19 @@
 \kern-1.45em %% this is negative space, it moves the bellow section up a bit
 \input{sections/education.tex}
 \input{sections/skills.tex}
-% \input{sections/strengths.tex}
+\verbose{}{\input{sections/strengths.tex}}
 \input{sections/projects.tex}
 
+\verbose{}{\input{sections/referees.tex}}
+
 % \clearpage %% this makes a new page lik
-\cvsection[page2sidebar.tex]{}
+% \cvsection[page2sidebar.tex]{}
 
 %% new page here
 % \input{sections/education.tex}
 %% divider
 
-% \input{sections/adayofmylife.tex}e a page break
+% \input{sections/adayofmylife.tex}
 % \input{sections/references.tex}
 
 %% If the NEXT page doesn't start with a \cvsection but you'd
@@ -142,3 +144,5 @@
 *References and copies of certificates will be provided upon request.
 
 \end{document}
+
+% \includepdf[pages=-]{myfile.pdf}
