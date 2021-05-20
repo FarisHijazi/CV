@@ -29,6 +29,15 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC24356
 echo "deb http://miktex.org/download/ubuntu focal universe" | sudo tee /etc/apt/sources.list.d/miktex.list
 sudo apt update
 sudo apt install miktex
+
+
+# texlive method
+sudo apt install texlive-full texlive-extra-utils
+sudo apt install xzdec
+tlmgr init-usertree
+sudo tlmgr update --all
+texliveonfly --compiler=pdflatex main.tex
+
 ```
 
 ## Compilation
