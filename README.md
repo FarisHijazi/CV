@@ -45,7 +45,11 @@ texliveonfly --compiler=pdflatex main.tex
 compile with:
 
 ```sh
-pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="."  "main.tex"
+# compile short CV
+pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="." -jobname=FarisHijazi_CV_short '\def\isverbose{}\input{main}'
+# compile long CV
+pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="." -jobname=FarisHijazi_CV_long '\input{main}'
+
 ```
 
 in the miktex portable command line, use the following:
