@@ -46,9 +46,9 @@ compile with:
 
 ```sh
 # compile short CV
-pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="." -jobname=FarisHijazi_CV_short '\def\isverbose{}\input{main}'
+pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="." -jobname=FarisHijazi_CV_short '\input{main}'
 # compile long CV
-pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="." -jobname=FarisHijazi_CV_long '\input{main}'
+pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output-directory="." -jobname=FarisHijazi_CV_long '\newcommand{\isverbose}{ON} \input{main}'
 
 ```
 

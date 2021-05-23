@@ -19,10 +19,7 @@
 
 %% @params: {#1:concise_content, #2 verbose_content (details)}
 \newcommand{\verbose}[2]{%
-  \expandafter\ifstrequal{%
-  \ifdef{\isverbose}{1}{}  %% use '\def\isverbose{}\input{main}' in the command line to print long CV
-    % 1 %% UNCOMMENT this line to make verbose
-  }{}{#1}{#2}
+  \IfStrEq{\isverbose}{ON}{#2}{#1}
 }
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
