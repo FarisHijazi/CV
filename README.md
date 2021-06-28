@@ -52,9 +52,9 @@ pdflatex  -synctex=1 -interaction=nonstopmode -file-line-error -recorder -output
 
 ```
 
-in the miktex portable command line, use the following:
+in the miktex portable (Windows) command line, use the following:
 
-```sh
+```powershell
 cd "C:\Users\Faris\Dropbox\Career\CV\CV - Faris Hijazi\"
 
 del "./main.pdf" || C:\texlive\2019\tlpkg\tlperl\bin\perl.exe c:\texlive\2019\texmf-dist\scripts\latexmk\latexmk.pl -synctex=1 -interaction=nonstopmode -file-line-error -pdf "-outdir=." "./main" -f || "./main.pdf"
