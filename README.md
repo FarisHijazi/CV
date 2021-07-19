@@ -19,25 +19,18 @@ Though if you're creating your own CV/résumé, you'd probably prefer using the 
 This is not the bets setup, you can find some on the web.
 
 ```shell script
-sudo apt install pdflatex
-sudo apt install texlive
-sudo apt install texlive-fonts-recommended
-sudo apt install texlive-fonts-extra
+# method 1 (recommended): texlive method
+sudo apt install -y texlive-full texlive-extra-utils xzdec
+sudo apt install -y pdflatex texlive texlive-fonts-recommended texlive-fonts-extra
+tlmgr init-usertree
+sudo tlmgr update --all
 
-# miktex install from: https://miktex.org/download/
+# method 2 (not recommended): miktex install from: https://miktex.org/download/
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
 echo "deb http://miktex.org/download/ubuntu focal universe" | sudo tee /etc/apt/sources.list.d/miktex.list
 sudo apt update
-sudo apt install miktex
-
-
-# texlive method
-sudo apt install texlive-full texlive-extra-utils
-sudo apt install xzdec
-tlmgr init-usertree
-sudo tlmgr update --all
-texliveonfly --compiler=pdflatex main.tex
-
+sudo apt install -y miktex
+sudo apt install -y texlive-bibtex-extra biber
 ```
 
 ## Compilation
