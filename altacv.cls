@@ -19,7 +19,9 @@
 
 %% @params: {#1:concise_content, #2 verbose_content (details)}
 \newcommand{\verbose}[2]{%
-  \IfStrEq{\isverbose}{ON}{#2}{#1}
+  \ifthenelse{\equal{\isverbose}{ON}}
+    {#2}
+    {#1}
 }
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
