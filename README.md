@@ -20,8 +20,7 @@ This is not the bets setup, you can find some on the web.
 
 ```shell script
 # method 1 (recommended): texlive method
-sudo apt install -y texlive-full texlive-extra-utils xzdec
-sudo apt install -y pdflatex texlive texlive-fonts-recommended texlive-fonts-extra
+sudo apt install -y texlive-full texlive-extra-utils xzdec texlive-bibtex-extra biber texlive texlive-fonts-recommended texlive-fonts-extra
 tlmgr init-usertree
 sudo tlmgr update --all
 
@@ -30,7 +29,6 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC24356
 echo "deb http://miktex.org/download/ubuntu focal universe" | sudo tee /etc/apt/sources.list.d/miktex.list
 sudo apt update
 sudo apt install -y miktex
-sudo apt install -y texlive-bibtex-extra biber
 ```
 
 ## Compilation
